@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Танцевальная студия «Ритм»</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">💃 РИТМ 🕺</div>
+        <div class="nav-links">
+            <a href="#directions">Направления</a>
+            <a href="#teachers">Преподаватели</a>
+            <a href="#schedule">Расписание</a>
+            <a href="#booking">Запись</a>
+            <a href="#my-bookings">Мои записи</a>
+        </div>
+    </div>
+</header>
+
+<!-- НАПРАВЛЕНИЯ -->
+<section id="directions">
+    <h2>💫 Направления танцев</h2>
+    <div class="filter-buttons" id="filterLevelBtns">
+        <button class="filter-btn active" data-level="all">Все</button>
+        <button class="filter-btn" data-level="Начинающий">🟢 Начинающий</button>
+        <button class="filter-btn" data-level="Средний">🟡 Средний</button>
+        <button class="filter-btn" data-level="Продвинутый">🔴 Продвинутый</button>
+    </div>
+    <div id="directionsList" class="cards-grid"></div>
+</section>
+
+<!-- ПРЕПОДАВАТЕЛИ -->
+<section id="teachers">
+    <h2>🎓 Наши преподаватели</h2>
+    <div id="teachersList" class="cards-grid"></div>
+</section>
+
+<!-- РАСПИСАНИЕ -->
+<section id="schedule">
+    <h2>📅 Расписание занятий</h2>
+    <div style="margin-bottom: 15px;">
+        <select id="scheduleFilterDance">
+            <option value="all">Все направления</option>
+        </select>
+    </div>
+    <div class="schedule-wrapper">
+        <table class="schedule-table">
+            <thead>
+                <tr><th>День</th><th>Время</th><th>Направление</th><th>Преподаватель</th><th>Свободно мест</th></tr>
+            </thead>
+            <tbody id="scheduleBody"></tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ФОРМА ЗАПИСИ -->
+<section id="booking">
+    <h2>✍️ Запись на пробное занятие</h2>
+    <div class="booking-form">
+        <div class="form-group">
+            <label>Ваше имя *</label>
+            <input type="text" id="userName" placeholder="Иван Петров">
+        </div>
+        <div class="form-group">
+            <label>Телефон *</label>
+            <input type="tel" id="userPhone" placeholder="+7 999 123-45-67">
+        </div>
+        <div class="form-group">
+            <label>Направление</label>
+            <select id="bookingDance"></select>
+        </div>
+        <div class="form-group">
+            <label>Дата</label>
+            <input type="date" id="bookingDate">
+        </div>
+        <div class="form-group">
+            <label>Время</label>
+            <select id="bookingTime"></select>
+        </div>
+        <button id="submitBooking">Записаться</button>
+        <div id="formMessage"></div>
+    </div>
+</section>
+
+<!-- МОИ ЗАПИСИ -->
+<section id="my-bookings">
+    <h2>📋 Мои записи</h2>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <input type="tel" id="viewPhone" placeholder="Введите ваш телефон" style="flex: 1;">
+        <button id="showMyBookingsBtn">Показать</button>
+    </div>
+    <div id="myBookingsList" class="bookings-list"></div>
+</section>
+
+<footer>
+    <p>💃 Танцевальная студия «Ритм» — танцуй с душой 🕺</p>
+</footer>
+
+<script src="sc1.js"></script>
+</body>
+</html>

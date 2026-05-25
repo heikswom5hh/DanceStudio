@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fef9f5;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Шапка */
+header {
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f5a623;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #f0e6db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f5a623;
+}
+
+/* Секции */
+section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-left: 5px solid #e65c4f;
+    padding-left: 15px;
+}
+
+/* Карточки */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.badge {
+    background: #f0e6db;
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+/* Таблица */
+.schedule-wrapper {
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-table th {
+    background: #222;
+    color: white;
+}
+
+/* Форма */
+.booking-form {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    background: #e65c4f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c53f32;
+}
+
+/* Сообщения */
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Мои записи */
+.bookings-list {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.booking-item {
+    background: #fcf7f2;
+    padding: 12px 15px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cancel-btn {
+    background: #6c757d;
+    width: auto;
+    padding: 6px 16px;
+}
+
+/* Фильтры */
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    background: #ede0d4;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn.active {
+    background: #e65c4f;
+    color: white;
+}
+
+/* Подвал */
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Адаптация */
+@media (max-width: 700px) {
+    .header-container {
+        flex-direction: column;
+    }
+    section {
+        padding: 25px 15px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+
+.dance-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
